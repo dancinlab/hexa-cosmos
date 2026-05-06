@@ -1,4 +1,4 @@
-# hexa-cosmos 🌌 — Cosmos substrate (HEXA family)
+# 🌌 hexa-cosmos — Cosmos substrate (HEXA family)
 
 > **Cosmos substrate — cosmology + particle-cosmology + cosmic observatory.
 > n=6 ΛCDM (LambdaCDM) closed-form comparison candidate.**
