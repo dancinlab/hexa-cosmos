@@ -117,33 +117,26 @@ n=6 closed-form 비교 후보 (candidate, not measurement).**
 
 ## §Install
 
-### Via git clone (works today)
-
 ```bash
-git clone https://github.com/dancinlab/hexa-cosmos.git ~/.hexa-cosmos
-export HEXA_COSMOS_ROOT=~/.hexa-cosmos
-export PATH="$HEXA_COSMOS_ROOT/cli:$PATH"
+# 1. Install hexa-lang (ships `hexa` + `hx` package manager)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/dancinlab/hexa-lang/main/install.sh)"
 
-# Run any subcommand:
-hexa run $HEXA_COSMOS_ROOT/cli/hexa-cosmos.hexa selftest
-```
-
-### Via `hx` (registry registration TBD)
-
-```bash
+# 2. Install hexa-cosmos
 hx install hexa-cosmos          # global, pulls latest from registry
-hx install hexa-cosmos@1.0.0    # pin specific version
-hexa-cosmos --version           # → 1.0.0
 ```
 
-### Quickstart
+---
+
+## §Run
 
 ```bash
-hexa-cosmos selftest         # 3-pillar markdown presence sweep
-hexa-cosmos status           # pillar status table + n=6 ΛCDM caveats
-hexa-cosmos cosmology        # SPEC — print spec path
-hexa-cosmos particle         # SPEC — print spec path
-hexa-cosmos observatory      # SPEC — print spec path
+hexa-cosmos cosmology           # cosmology spec (ΛCDM 6-param closed-form candidate)  [SPEC]
+hexa-cosmos particle            # particle-cosmology spec                              [SPEC]
+hexa-cosmos observatory         # cosmic-observatory spec                              [SPEC]
+hexa-cosmos status              # 0/3-wired pillar table + verdict + caveats
+hexa-cosmos selftest            # full 3-pillar markdown presence sweep
+hexa-cosmos --version           # show version
+hexa-cosmos --help              # full usage
 ```
 
 ---
