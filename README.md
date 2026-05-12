@@ -23,7 +23,7 @@
 
 ---
 
-## §Why — n=6 우주론 substrate
+## Why — n=6 우주론 substrate
 
 `hexa-cosmos`는 **3-pillar Cosmos substrate**로, write-side 우주론 spec을
 공개한다. ΛCDM의 핵심 좌표 — **6개 독립 파라미터**, **Ω_m : Ω_Λ ≈ 1/3 : 2/3**,
@@ -55,39 +55,7 @@ n=6 invariant lattice가 ΛCDM와 만나는 지점 — **n_s = 27/28 = (n/φ)³/
 
 ---
 
-## §Verbs — 3-pillar architecture
-
-| pillar       | source (`canon@c0f1f570`)               | status         |
-|--------------|---------------------------------------------------|----------------|
-| `cosmology`  | `domains/physics/cosmology/`                      | SPEC v1.0.0    |
-| `particle`   | `domains/physics/cosmology-particle/`             | SPEC v1.0.0    |
-| `observatory`| `domains/physics/cosmic-observatory/`             | SPEC v1.0.0    |
-
-### 3-pillar status table
-
-```
-  pillar        status              n=6 ΛCDM mapping         empirical sandbox
-  ------------- ------------------- ------------------------ --------------------------
-  cosmology     SPEC v1.0.0         candidate closed-form    deferred (post-v1.0)
-  particle      SPEC v1.0.0         candidate closed-form    deferred (post-v1.0)
-  observatory   SPEC v1.0.0         candidate closed-form    deferred (post-v1.0)
-```
-
-### n=6 invariant lattice
-
-| symbol     | value | derivation                                |
-|------------|-------|-------------------------------------------|
-| n          | 6     | DOF; SE(3) = R³ × SO(3)                   |
-| σ(6)       | 12    | divisor sum (OEIS A000203)                |
-| τ(6)       | 4     | divisor count (OEIS A000005)              |
-| φ(6)       | 2     | minimum prime factor                      |
-| J₂         | 24    | 2σ; quadratic-form minimal-vector count   |
-
-Master identity: `σ·φ_E = n·τ = 24` (n=6 uniqueness lemma).
-
----
-
-## §Status
+## Status
 
 **이론 + 후보 spec. 작동 `.hexa` CLI TBD. ΛCDM (LambdaCDM) baseline에 대한
 n=6 closed-form 비교 후보 (candidate, not measurement).**
@@ -141,7 +109,7 @@ hexa-cosmos --help              # full usage
 
 ---
 
-## §Cross-link
+## Cross-link
 
 Sister substrates (each independent, MIT/Apache-2.0 standalone):
 
@@ -168,7 +136,7 @@ repo is a thin standalone wrapper that exposes the 3 pillars + a placeholder
 
 ---
 
-## §License
+## License
 
 MIT — see [LICENSE](LICENSE).
 
