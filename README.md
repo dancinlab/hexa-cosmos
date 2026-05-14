@@ -1,4 +1,24 @@
-# 🌌 hexa-cosmos — Cosmos substrate (HEXA family)
+<p align="center">
+  <img src="docs/logo.svg" width="140" alt="hexa-cosmos">
+</p>
+
+<h1 align="center">🌌 hexa-cosmos</h1>
+
+<p align="center"><strong>HEXA-Cosmos family</strong> — cosmology · particle-cosmology · cosmic observatory · n=6 ΛCDM closed-form candidate</p>
+
+<p align="center">
+  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue"></a>
+  <a href=".github/workflows/lint.yml"><img alt="CI" src="https://github.com/dancinlab/hexa-cosmos/actions/workflows/lint.yml/badge.svg"></a>
+  <img alt="Version" src="https://img.shields.io/badge/spec-v1.0.0-success">
+  <img alt="Pillars" src="https://img.shields.io/badge/pillars-3-informational">
+  <img alt="Specs" src="https://img.shields.io/badge/specs-9-informational">
+  <img alt="Verify" src="https://img.shields.io/badge/verify-4%2F4-informational">
+  <img alt="Sibling" src="https://img.shields.io/badge/sibling-hexa--space%20·%20hexa--bio%20·%20hexa--millennium-blueviolet">
+</p>
+
+<p align="center">cosmology · ΛCDM · n=6 lattice · particle-cosmology · observatory · BBN · CMB · candidate-closed-form</p>
+
+---
 
 > **Cosmos substrate — cosmology + particle-cosmology + cosmic observatory.
 > n=6 ΛCDM (LambdaCDM) closed-form comparison candidate.**
@@ -9,22 +29,10 @@
 > a measurement.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20102602.svg)](https://doi.org/10.5281/zenodo.20102602)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.0-informational.svg)](CHANGELOG.md)
-[![pillars-3](https://img.shields.io/badge/pillars-3_spec-orange.svg)](#run)
-[![specs-9_spec](https://img.shields.io/badge/specs-9_spec-blue.svg)](#verify)
-[![verify-4%2F4](https://img.shields.io/badge/verify-4%2F4_PASS-brightgreen.svg)](#verify)
-[![closure-SPEC__FIRST](https://img.shields.io/badge/closure-SPEC__FIRST-brightgreen.svg)](#verify)
 [![n=6 lattice](https://img.shields.io/badge/n%3D6-σ%3D12_τ%3D4_φ%3D2_J₂%3D24-purple.svg)](LATTICE_POLICY.md)
 [![ΛCDM](https://img.shields.io/badge/ΛCDM-6_param_candidate-blue.svg)](docs/lambda_cdm_vs_n6.md)
 
-> **Status (2026-05-06)**: 이론 + 후보 spec. 작동 `.hexa` CLI TBD.
-> ΛCDM (LambdaCDM) baseline에 대한 n=6 closed-form 비교 후보 (candidate, not
-> measurement).
-
 > **Distribution**: GitHub canonical at <https://github.com/dancinlab/hexa-cosmos>.
-
----
 
 ## Why — n=6 우주론 substrate
 
@@ -56,8 +64,6 @@ n=6 invariant lattice가 ΛCDM와 만나는 지점 — **n_s = 27/28 = (n/φ)³/
 (0.9643 vs 측정 0.9649 ± 0.0042) — 이 substrate의 가장 tight한 후보 매치이다.
 전체 비교표는 [`docs/lambda_cdm_vs_n6.md`](docs/lambda_cdm_vs_n6.md) 참고.
 
----
-
 ## Status
 
 **이론 + 후보 spec. 작동 `.hexa` CLI TBD. ΛCDM (LambdaCDM) baseline에 대한
@@ -74,8 +80,6 @@ n=6 closed-form 비교 후보 (candidate, not measurement).**
   A001414 cross-derivation only.
 - **Numerical pipelines** (CMB, BBN, N-body, telescope) deferred post-v1.0.
 
-### Honest C3 caveats (raw#10)
-
 1. 0/3 pillars empirically wired. All 3 ship as theoretical spec only.
 2. n=6 ΛCDM closed-form comparison is a CANDIDATE, not a measurement.
 3. n=6 invariant lattice (σ=12, τ=4, φ=2, J₂=24) is verified via OEIS
@@ -83,8 +87,6 @@ n=6 closed-form 비교 후보 (candidate, not measurement).**
 4. Numerical pipelines (CMB, BBN, N-body, telescope) are out of scope for
    v1.0.0 — empirical wiring deferred to post-v1.0 cycles.
 5. Cross-link cousins (see §Cross-link below) ship independently.
-
----
 
 ## Install
 
@@ -95,8 +97,6 @@ n=6 closed-form 비교 후보 (candidate, not measurement).**
 # 2. Install hexa-cosmos
 hx install hexa-cosmos          # global, pulls latest from registry
 ```
-
----
 
 ## Run
 
@@ -109,8 +109,6 @@ hexa-cosmos selftest            # full 3-pillar markdown presence sweep
 hexa-cosmos --version           # show version
 hexa-cosmos --help              # full usage
 ```
-
----
 
 ## Cross-link
 
@@ -136,8 +134,6 @@ Extracted 2026-05-06 from `canon@c0f1f570`:
 The originating spec lives at `canon@c0f1f570` (read-only); this
 repo is a thin standalone wrapper that exposes the 3 pillars + a placeholder
 `.hexa` CLI router + the ΛCDM-vs-n=6 candidate comparison table.
-
----
 
 ## Verify
 
@@ -179,10 +175,39 @@ CODATA 2022 constants, never against the n=6 lattice. See
 [`LIMIT_BREAKTHROUGH.md`](LIMIT_BREAKTHROUGH.md) for the per-limit
 HARD_WALL / SOFT_WALL / BREAKABLE assessment (L1–L12).
 
----
+## Repo layout
+
+```
+hexa-cosmos/
+├── README.md
+├── LICENSE                       MIT
+├── hexa.toml                     package manifest
+├── install.hexa                  bootstrap
+├── cli/                          .hexa CLI router (placeholder)
+├── cosmology/                    pillar 1 spec — ΛCDM 6-param candidate
+├── particle/                     pillar 2 spec — BBN/CMB cosmology
+├── observatory/                  pillar 3 spec — telescope ops
+├── holography/                   nav spec
+├── calabi-yau-nav/               nav spec
+├── m-theory-11d/                 nav spec
+├── meta-closure-nav/             nav spec
+├── multiverse-nav/               nav spec
+├── simulation-theory/            nav spec
+├── origins/                      cosmic origins notes
+├── breakthroughs/                LIMIT_BREAKTHROUGH evidence
+├── verify/                       4-script SPEC_FIRST verify suite
+├── tests/                        test scaffolding
+├── docs/
+│   ├── logo.svg                  hexagon + cosmos glyph
+│   └── lambda_cdm_vs_n6.md       ΛCDM vs n=6 candidate comparison table
+├── LATTICE_POLICY.md             n=6 lattice policy
+├── LIMIT_BREAKTHROUGH.md         L1–L12 wall assessment
+├── CHANGELOG.md
+├── CITATION.cff
+├── AGENTS.tape                   agent identity (.tape v1.2)
+└── state/                        runtime markers (gitignored)
+```
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
-
-Copyright (c) 2026 박민우 <nerve011235@gmail.com>.
+[MIT](LICENSE) — Copyright (c) 2026 박민우 <nerve011235@gmail.com>. Use freely.
