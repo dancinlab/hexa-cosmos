@@ -46,7 +46,7 @@
 @I id001 := "hexa-cosmos" :: identity-claim [d=2026-05-14 active]
   kind = "HEXA-Cosmos family — cosmology"
   brief = "HEXA-Cosmos family · cosmology"
-  parent = "dancinlab/echoes"
+  parent = "dancinlab"
 
 @L l1 := "repo-layout" :: structure [active]
   .roadmap.hexa_cosmos -> "file"
